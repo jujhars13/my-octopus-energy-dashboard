@@ -22,13 +22,12 @@ Using the [Octopus Energy 30 min api](https://octopus.energy/dashboard/developer
 (cd app && npm run build)
 ```
 
-
 ```bash
 # to get 30 meter reading data from the Octopus API
 API_KEY="sk_live_ZWUxZTg3ZGEwZmYzYzQ1MWE4ZjhlODJi" \
   MPAN="3705000641528" \
   SERIAL="68D51222970"
-curl -u "${API_KEY}:" "https://api.octopus.energy/v1/electricity-meter-points/${MPAN}/meters/${SERIAL}/consumption/" > data.json
+curl -u "${API_KEY}:" "https://api.octopus.energy/v1/electricity-meter-points/${MPAN}/meters/${SERIAL}/consumption/" | jq > app/src/data/data.json
 ```
 
 ## Licence

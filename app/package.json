@@ -13,11 +13,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.42.0",
-    "webpack-cli": "^4.7.2",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "html-webpack-plugin": "^4.5.1",
     "prettier": "^2.2.1",
     "reload": "^3.1.1",
-    "copy-webpack-plugin": "^7.0.0",
-    "html-webpack-plugin": "^4.5.1"
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
   }
 }

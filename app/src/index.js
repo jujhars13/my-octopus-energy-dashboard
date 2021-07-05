@@ -1,7 +1,13 @@
-import * as dashboard from "./js/dashboard.js";
+import { data } from "./js/data.js";
 
-const container = document.getElementById("container");
+const template = `
+<p>Total Samples: ${data.meta.recordCount}</p>
+<p>Start Datetime: ${data.meta.startDateTime}</p>
+<p>End Datetime: ${data.meta.endDateTime}</p>
+`;
 
-// const debug = (document.getElementById(
-//   "debug"
-// ).innerHTML = `<code>${JSON.stringify(surs)}</code>`);
+document.getElementById("container").innerHTML = template;
+
+document.getElementById("debug").innerHTML = `<code>${JSON.stringify(
+  data
+)}</code>`;
