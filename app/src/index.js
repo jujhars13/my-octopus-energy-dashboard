@@ -8,8 +8,8 @@ const peakPeriodCost = data.peakPeriodConsumption * peakPeriodPrice;
 
 const template = `
 <p>Total Samples: ${data.meta.recordCount}</p>
-<p>Start Datetime: ${data.meta.startDateTime}</p>
-<p>End Datetime: ${data.meta.endDateTime}</p>
+<p>End Datetime: ${data.meta.endDateTime.toUTCString()}</p>
+<p>Start Datetime: ${data.meta.startDateTime.toUTCString()}</p>
 <p>Total Usage in period: ${data.periodTotalKwh.toFixed(4)} kWh</p>
 <p>Cheap Period Consumption <em>(@ ${cheapPeriodPrice}p/kWh)</em>: ${data.cheapPeriodConsumption.toFixed(
   2
